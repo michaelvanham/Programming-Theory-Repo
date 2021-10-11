@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Cube : Unit
+public class Cube : Unit // INHERITANCE
 {
     protected override void Dance()
     {

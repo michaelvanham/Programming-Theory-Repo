@@ -20,9 +20,9 @@ public class Unit : MonoBehaviour
     // Update is called once per frame
     protected virtual void Update()
     {
-        Move();
-        Dance();
-        CheckBoundary();
+        Move(); // ABSTRACTION
+        Dance(); // POYMORPHISM
+        CheckBoundary(); // ABSTRACTION
     }
 
     protected virtual void PickNewVelocity()

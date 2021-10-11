@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Sphere : Unit
+public class Sphere : Unit // INHERITANCE
 {
     protected override void Awake()
     {

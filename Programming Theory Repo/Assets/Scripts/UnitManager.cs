@@ -9,7 +9,7 @@ public class UnitManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        SpawnShape();
+        SpawnShape(); // ABSTRACTION
     }
 
     // Update is called once per frame
@@ -20,8 +20,11 @@ public class UnitManager : MonoBehaviour
 
     void SpawnShape()
     {
+        // spawn a random shape
         int shapeToSpawn = Random.Range(0, shapes.Count);
         var newShape = Instantiate<Unit>(shapes[shapeToSpawn]);
+
+        // set the boundary size for that shape
         newShape.SetAreaSize();
     }
 }
