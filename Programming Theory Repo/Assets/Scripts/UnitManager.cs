@@ -25,6 +25,8 @@ public class UnitManager : MonoBehaviour
         var newShape = Instantiate<Unit>(shapes[shapeToSpawn]);
 
         // set the boundary size for that shape
-        newShape.SetAreaSize();
+        float boundsX = Random.Range(10, 40);
+        float boundsZ = Random.Range(10, 40);
+        newShape.SetAreaSize(boundsX, boundsZ);
     }
 }

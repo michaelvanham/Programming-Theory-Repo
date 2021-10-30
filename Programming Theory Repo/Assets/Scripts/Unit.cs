@@ -5,6 +5,8 @@ using UnityEngine;
 public class Unit : MonoBehaviour
 {
     protected Vector3 currentVelocity;
+    protected float boundsX = 30;
+    protected float boundsZ = 30;
 
     protected virtual void Awake()
     {
@@ -46,21 +48,23 @@ public class Unit : MonoBehaviour
     private void CheckBoundary()
     {
         // destroy if we're outside the boundary
-        if (transform.position.x < -30 || transform.position.x > 30)
+        if (transform.position.x < -boundsX || transform.position.x > boundsX)
         {
             Destroy(gameObject);
             return;
         }
 
-        if (transform.position.z < -30 || transform.position.z > 30)
+        if (transform.position.z < -boundsZ || transform.position.z > boundsZ)
         {
             Destroy(gameObject);
             return;
         }
     }
 
-    public void SetAreaSize()
+    public void SetAreaSize(float bX, float bZ) // ENCAPSULATION
     {
         // configure the size of the area the shape should exist in
+        boundsX = bX;
+        boundsZ = bZ;
     }
 }
