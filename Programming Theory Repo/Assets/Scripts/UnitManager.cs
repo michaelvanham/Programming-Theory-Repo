@@ -18,7 +18,7 @@ public class UnitManager : MonoBehaviour
         // spawn new shape every 5s
     }
 
-    void SpawnShape()
+    public void SpawnShape()
     {
         // spawn a random shape
         int shapeToSpawn = Random.Range(0, shapes.Count);
