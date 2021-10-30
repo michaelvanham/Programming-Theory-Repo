@@ -7,6 +7,6 @@ public class Capsule : Unit // INHERITANCE
     protected override void Dance()
     {
         // rotate in direction of movement
-        transform.Rotate(currentVelocity);
+        transform.Rotate(currentVelocity * Time.deltaTime * 50);
     }
 }
